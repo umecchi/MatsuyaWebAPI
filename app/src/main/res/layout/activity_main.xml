@@ -6,29 +6,137 @@
     android:layout_height="match_parent"
     tools:context="matsuya.web.api.MainActivity">
 
-    <RelativeLayout
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipelayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/matsuya_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="6dp">
 
-        <Button
-            android:id="@+id/matsuya"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/matsuya_text"
-            android:layout_centerHorizontal="true"
-            android:text="松屋" />
-    </RelativeLayout>
+            <ScrollView
+                android:id="@+id/ScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/LinearLayout"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="name" />
+
+                    <TextView
+                        android:id="@+id/type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="type" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/type"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="price" />
+
+                    <TextView
+                        android:id="@+id/calorie"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/price"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="calorie" />
+
+                    <TextView
+                        android:id="@+id/protein"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/calorie"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="protein" />
+
+                    <TextView
+                        android:id="@+id/lipid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/protein"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="lipid" />
+
+                    <TextView
+                        android:id="@+id/carbohydrate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lipid"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="carbohydrate" />
+
+                    <TextView
+                        android:id="@+id/sodium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/carbohydrate"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="sodium" />
+
+                    <TextView
+                        android:id="@+id/saltEquivalent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sodium"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="saltEquivalent" />
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/saltEquivalent"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="description" />
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </android.support.constraint.ConstraintLayout>
