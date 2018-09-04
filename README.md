@@ -1,7 +1,7 @@
 MatsuyaWebAPI
 ====
 
-[Matsuya-Web-API](https://github.com/maktoia/Matsuya-Web-API)をAndroidで使うアプリ
+[Matsuya-Web-API](https://github.com/makotia/Matsuya-Web-API)をAndroidで使うアプリ
 
 ## Author
 
